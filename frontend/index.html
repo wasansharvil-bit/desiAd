@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DesiAd AI – Regional Business Ad Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">DesiAd AI</p>
+        <h1>Regional Business Ad Generator</h1>
+        <p class="lede">Craft WhatsApp & Instagram-ready promos for Indian small businesses in seconds.</p>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="card">
+        <form id="ad-form" class="form">
+          <div class="field">
+            <label for="businessName">Business Name</label>
+            <input id="businessName" name="businessName" type="text" placeholder="Rani's Boutique" required />
+          </div>
+          <div class="field">
+            <label for="businessType">Business Type</label>
+            <input id="businessType" name="businessType" type="text" placeholder="Clothing Store" required />
+          </div>
+          <div class="field">
+            <label for="city">City</label>
+            <input id="city" name="city" type="text" placeholder="Pune" required />
+          </div>
+          <div class="field">
+            <label for="offer">Offer/Discount</label>
+            <input id="offer" name="offer" type="text" placeholder="Festive sale – up to 30% off" required />
+          </div>
+          <div class="grid">
+            <div class="field">
+              <label for="language">Language</label>
+              <select id="language" name="language" required>
+                <option>Hindi</option>
+                <option>Marathi</option>
+                <option>Tamil</option>
+                <option>Telugu</option>
+                <option>Bengali</option>
+                <option>English</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="tone">Tone</label>
+              <select id="tone" name="tone" required>
+                <option>Festive</option>
+                <option>Professional</option>
+                <option>Friendly</option>
+                <option>Urgent</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" id="generateBtn">
+            <span class="btn-label">Generate Ads</span>
+            <span class="spinner" id="spinner" aria-hidden="true"></span>
+          </button>
+          <p class="note">API key stays secure on Cloudflare Worker. Frontend hosted on GitHub Pages.</p>
+        </form>
+      </section>
+
+      <section class="outputs" id="outputs" hidden>
+        <div class="output-card">
+          <div class="output-header">
+            <h3>WhatsApp Message</h3>
+            <button class="copy" data-target="whatsapp">Copy</button>
+          </div>
+          <pre id="whatsapp" class="output"></pre>
+        </div>
+        <div class="output-card">
+          <div class="output-header">
+            <h3>Instagram Caption</h3>
+            <button class="copy" data-target="instagram">Copy</button>
+          </div>
+          <pre id="instagram" class="output"></pre>
+        </div>
+        <div class="output-card">
+          <div class="output-header">
+            <h3>Poster Headline</h3>
+            <button class="copy" data-target="poster_headline">Copy</button>
+          </div>
+          <pre id="poster_headline" class="output"></pre>
+        </div>
+        <div class="output-card">
+          <div class="output-header">
+            <h3>Hashtags</h3>
+            <button class="copy" data-target="hashtags">Copy</button>
+          </div>
+          <pre id="hashtags" class="output"></pre>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

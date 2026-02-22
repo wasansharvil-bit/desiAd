@@ -1,0 +1,7 @@
+name = "desiad-ai"
+main = "backend/worker.js"
+compatibility_date = "2025-01-18"
+
+[vars]
+# Comma-separated list of allowed origins for CORS. Use "*" for any.
+ALLOWED_ORIGIN = "*"
