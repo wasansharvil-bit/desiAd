@@ -1,0 +1,26 @@
+{
+  "name": "sharvil-agent",
+  "version": "1.0.0",
+  "description": "Generate WhatsApp and Instagram-ready promotional content for Indian small businesses using Sarvam AI, with a free static frontend (GitHub Pages) and a serverless backend (Cloudflare Worker). API keys stay on the backend.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wasansharvil-bit/desiAd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wasansharvil-bit/desiAd/issues"
+  },
+  "homepage": "https://github.com/wasansharvil-bit/desiAd#readme",
+  "devDependencies": {
+    "wrangler": "^4.69.0"
+  }
+}

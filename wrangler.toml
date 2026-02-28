@@ -3,5 +3,12 @@ main = "backend/worker.js"
 compatibility_date = "2025-01-18"
 
 [vars]
-# Comma-separated list of allowed origins for CORS. Use "*" for any.
-ALLOWED_ORIGIN = "*"
+# Set to your exact frontend origin. Use "*" only for local development.
+ALLOWED_ORIGIN = "https://wasansharvil.github.io"
+
+# KV namespace for IP-based rate limiting.
+# Create it with: wrangler kv namespace create RATE_LIMITER
+# Then replace the id below with the value printed by that command.
+[[kv_namespaces]]
+binding = "RATE_LIMITER"
+id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
